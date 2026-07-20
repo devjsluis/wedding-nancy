@@ -47,7 +47,7 @@ export function EventDetails() {
           </h3>
 
           <a
-            href="https://www.google.com/maps/search/?api=1&query=La+Yerbabuena+Mascota+Jalisco"
+            href="https://maps.app.goo.gl/RPWU2QoGTuWsQLMF6"
             target="_blank"
             rel="noreferrer"
             className="mt-8 inline-flex rounded-full bg-[#6a424c] px-8 py-4 text-sm uppercase tracking-[0.25em] text-white transition hover:scale-105"
