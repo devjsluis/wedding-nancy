@@ -123,26 +123,25 @@ export function Gallery() {
                   <div
                     key={photo.src}
                     className="
-                      min-w-0
-                      flex-[0_0_88%]
-                      px-2
-                      transition-all
-                      duration-500
-                      sm:flex-[0_0_68%]
-                      sm:px-3
-                      lg:flex-[0_0_46%]
-                    "
+        min-w-0
+        flex-[0_0_88%]
+        px-2
+        sm:flex-[0_0_68%]
+        sm:px-3
+        lg:flex-[0_0_46%]
+      "
                   >
                     <div
                       className={`
-                        relative overflow-hidden rounded-4xl
-                        transition-all duration-700 ease-out
-                        ${
-                          isSelected
-                            ? "scale-100 opacity-100 shadow-[0_30px_80px_rgba(66,89,74,0.22)]"
-                            : "scale-[0.9] opacity-45"
-                        }
-                      `}
+          relative overflow-hidden rounded-4xl
+          transition-[transform,opacity,box-shadow]
+          duration-700 ease-out
+          ${
+            isSelected
+              ? "scale-100 opacity-100 shadow-[0_30px_80px_rgba(66,89,74,0.22)]"
+              : "scale-[0.9] opacity-45"
+          }
+        `}
                     >
                       <div className="relative aspect-4/5 sm:aspect-5/6">
                         <Image
@@ -150,10 +149,10 @@ export function Gallery() {
                           alt={photo.alt}
                           fill
                           sizes="
-                            (max-width: 640px) 88vw,
-                            (max-width: 1024px) 68vw,
-                            46vw
-                          "
+              (max-width: 640px) 88vw,
+              (max-width: 1024px) 68vw,
+              46vw
+            "
                           className="object-cover transition-transform duration-1200 ease-out hover:scale-105"
                           priority={index === 0}
                         />
@@ -162,17 +161,17 @@ export function Gallery() {
 
                         <div
                           className={`
-                            absolute right-0 bottom-0 left-0
-                            flex items-end justify-between
-                            p-6 text-white
-                            transition-all duration-700
-                            sm:p-8
-                            ${
-                              isSelected
-                                ? "translate-y-0 opacity-100"
-                                : "translate-y-4 opacity-0"
-                            }
-                          `}
+              absolute right-0 bottom-0 left-0
+              flex items-end justify-between
+              p-6 text-white
+              transition-[transform,opacity] duration-700
+              sm:p-8
+              ${
+                isSelected
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
+              }
+            `}
                         >
                           <span className="font-serif text-2xl italic sm:text-3xl">
                             Nuestro recuerdo
