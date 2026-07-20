@@ -6,7 +6,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
 import { Hotels } from "@/components/sections/Hotels";
-import { RSVP } from "@/components/sections/RSVP";
+// import { RSVP } from "@/components/sections/RSVP";
 import { Story } from "@/components/sections/Story";
 
 export default function Home() {
