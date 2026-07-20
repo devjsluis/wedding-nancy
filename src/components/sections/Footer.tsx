@@ -6,14 +6,14 @@ export function Footer() {
       </p>
 
       <h2 className="mt-6 font-serif text-6xl">
-        Jesús <span className="italic">&</span> Valeria
+        Valeria <span className="italic">&</span> Jesús
       </h2>
 
       <p className="mt-6 text-white/70">
         19 de diciembre de 2026 · Mascota, Jalisco
       </p>
 
-      <p className="mt-10 text-sm text-white/45">Con amor, Jesús y Valeria</p>
+      <p className="mt-10 text-sm text-white/45">Con amor, Valeria y Jesús</p>
     </footer>
   );
 }

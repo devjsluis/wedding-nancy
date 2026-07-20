@@ -34,7 +34,7 @@ export function Countdown() {
   }, []);
 
   return (
-    <section className="bg-white py-32">
+    <section className="bg-[#b9bbb0] py-32">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <p className="uppercase tracking-[0.4em] text-[#6a424c]">
           Cuenta regresiva

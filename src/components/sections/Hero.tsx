@@ -21,7 +21,7 @@ export function Hero() {
         </p>
 
         <h1 className="font-serif text-7xl leading-none md:text-9xl">
-          Jesús <span className="italic">&</span> Valeria
+          Valeria <span className="italic">&</span> Jesús
         </h1>
 
         <p className="mt-8 text-lg tracking-[0.25em] text-white/85">
