@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesús y Valeria | Wedding",
-  description: "Invitación de boda de Jesús y Valeria",
+  title: "Valeria & Jesús",
+  description: "Invitación de boda de Valeria y Jesús",
 };
 
 export default function RootLayout({

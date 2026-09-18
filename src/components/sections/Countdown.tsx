@@ -16,7 +16,15 @@ export function Countdown() {
     function updateCountdown() {
       const difference = weddingDate.getTime() - Date.now();
 
-      if (difference <= 0) return;
+      if (difference <= 0) {
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
+        return;
+      }
 
       setTimeLeft({
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -34,31 +42,57 @@ export function Countdown() {
   }, []);
 
   return (
-    <section className="bg-[#b9bbb0] py-32">
-      <div className="mx-auto max-w-6xl px-6 text-center">
-        <p className="uppercase tracking-[0.4em] text-[#6a424c]">
+    <section className="relative overflow-hidden bg-[#6a424c] py-24 text-white md:py-32">
+      {/* Decoración sutil de fondo */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full border border-white/10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 -right-28 h-96 w-96 rounded-full border border-white/10"
+      />
+
+      <div className="relative mx-auto max-w-5xl px-5 text-center">
+        <p className="text-xs uppercase tracking-[0.5em] text-white/65 md:text-sm">
           Cuenta regresiva
         </p>
 
-        <h2 className="mt-4 text-5xl text-[#42594a]">Falta muy poco</h2>
+        <h2 className="mt-5 font-serif text-5xl italic leading-none text-white md:text-6xl">
+          Faltan
+        </h2>
 
-        <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
-          <TimeCard value={timeLeft.days} label="Días" />
-          <TimeCard value={timeLeft.hours} label="Horas" />
-          <TimeCard value={timeLeft.minutes} label="Minutos" />
-          <TimeCard value={timeLeft.seconds} label="Segundos" />
+        <div className="mx-auto mt-7 h-px w-16 bg-white/45" />
+
+        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-4 md:mt-14">
+          <TimeUnit value={timeLeft.days} label="días" />
+          <TimeUnit value={timeLeft.hours} label="horas" />
+          <TimeUnit value={timeLeft.minutes} label="minutos" />
+          <TimeUnit value={timeLeft.seconds} label="segundos" />
+        </div>
+
+        <p className="mt-12 font-serif text-xl italic tracking-wide text-white/90 md:mt-14 md:text-2xl">
+          para nuestra boda
+        </p>
+
+        <div className="mx-auto mt-6 flex max-w-[170px] items-center gap-3">
+          <span className="h-px flex-1 bg-white/25" />
+          <span className="text-sm text-white/60">♡</span>
+          <span className="h-px flex-1 bg-white/25" />
         </div>
       </div>
     </section>
   );
 }
 
-function TimeCard({ value, label }: { value: number; label: string }) {
+function TimeUnit({ value, label }: { value: number; label: string }) {
   return (
-    <div className="rounded-3xl border border-[#42594a]/10 bg-[#f8f5ef] p-8">
-      <div className="text-5xl text-[#42594a]">{value}</div>
+    <div className="relative px-1 text-center md:px-6">
+      <div className="font-serif text-4xl font-light leading-none text-white sm:text-5xl md:text-6xl">
+        {value}
+      </div>
 
-      <div className="mt-3 uppercase tracking-[0.3em] text-[#6a424c]">
+      <div className="mt-3 text-[9px] uppercase tracking-[0.16em] text-white/70 sm:text-[11px] md:mt-4 md:text-xs md:tracking-[0.25em]">
         {label}
       </div>
     </div>

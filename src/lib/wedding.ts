@@ -1,6 +1,6 @@
 export const weddingConfig = {
-  bride: "Jesús",
-  groom: "Valeria",
+  bride: "Valeria",
+  groom: "Jesús",
 
   date: "2026-12-19T17:00:00-06:00",
   displayDate: "19 de diciembre de 2026",
