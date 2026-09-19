@@ -60,3 +60,74 @@ export async function createInvitation(
     throw error;
   }
 }
+
+export async function updateInvitation(
+  token: string,
+  id: string,
+  payload: {
+    groupName?: string;
+    maxGuests?: number;
+    contactName?: string;
+    contactPhone?: string;
+    contactEmail?: string;
+  },
+) {
+  try {
+    const { data } = await api.patch(`/api/admin/invitations/${id}`, payload, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        error.response?.data?.message || "No se pudo actualizar la invitación",
+      );
+    }
+
+    throw error;
+  }
+}
+
+export async function deleteInvitation(token: string, id: string) {
+  try {
+    const { data } = await api.delete(`/api/admin/invitations/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      throw new Error(
+        error.response?.data?.message || "No se pudo eliminar la invitación",
+      );
+    }
+
+    throw error;
+  }
+}
+
+export async function downloadInvitationsExcel(token: string) {
+  const response = await api.get("/api/admin/export.xlsx", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    responseType: "blob",
+  });
+
+  const url = URL.createObjectURL(response.data);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "invitados-valeria-jesus.xlsx";
+
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+
+  URL.revokeObjectURL(url);
+}
