@@ -8,6 +8,8 @@ import {
   Clipboard,
   Download,
   Edit3,
+  Eye,
+  EyeOff,
   ExternalLink,
   LogOut,
   Plus,
@@ -66,6 +68,7 @@ export default function AdminPage() {
   const [token, setToken] = useState<string | null>(null);
   const [authReady, setAuthReady] = useState(false);
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
@@ -340,19 +343,43 @@ export default function AdminPage() {
             Administra las invitaciones y confirmaciones de la boda.
           </p>
 
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                void handleLogin();
+          <div className="relative mt-8">
+            <input
+              type={showPassword ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  void handleLogin();
+                }
+              }}
+              placeholder="Contraseña"
+              autoFocus
+              className="w-full rounded-full border border-[#42594a]/15 bg-white px-6 py-4 pr-14 outline-none transition focus:border-[#6a424c]"
+            />
+
+            <button
+              type="button"
+              onClick={() => setShowPassword((current) => !current)}
+              className="absolute right-5 top-1/2 -translate-y-1/2 text-[#6a424c]/60 transition hover:text-[#6a424c]"
+              aria-label={
+                showPassword
+                  ? "Ocultar contraseña"
+                  : "Mostrar contraseña"
               }
-            }}
-            placeholder="Contraseña"
-            autoFocus
-            className="mt-8 w-full rounded-full border border-[#42594a]/15 bg-white px-6 py-4 outline-none transition focus:border-[#6a424c]"
-          />
+              title={
+                showPassword
+                  ? "Ocultar contraseña"
+                  : "Mostrar contraseña"
+              }
+            >
+              {showPassword ? (
+                <EyeOff size={20} aria-hidden="true" />
+              ) : (
+                <Eye size={20} aria-hidden="true" />
+              )}
+            </button>
+          </div>
 
           <button
             onClick={handleLogin}
