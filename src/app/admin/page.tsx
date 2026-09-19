@@ -398,9 +398,9 @@ export default function AdminPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f8f5ef] text-[#42594a]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f8f5ef] text-[#42594a]">
       <header className="sticky top-0 z-50 border-b border-[#42594a]/10 bg-white/90 shadow-sm shadow-[#42594a]/5 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 md:px-8">
+        <div className="mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between gap-4 px-5 py-5 md:px-8">
           <div>
             <p className="text-[9px] uppercase tracking-[0.4em] text-[#6a424c] md:text-[10px]">
               Valeria &amp; Jesús
@@ -438,7 +438,7 @@ export default function AdminPage() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-12">
+      <div className="mx-auto w-full min-w-0 max-w-7xl px-5 py-8 md:px-8 md:py-12">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-[#6a424c]">
             Panel de boda
@@ -489,7 +489,7 @@ export default function AdminPage() {
         </section>
 
         <section className="mt-8 rounded-[2rem] bg-[#6a424c] p-6 text-white shadow-lg shadow-[#6a424c]/10 md:p-8">
-          <div className="grid items-end gap-6 lg:grid-cols-[1fr_170px_auto]">
+          <div className="grid min-w-0 items-end gap-6 lg:grid-cols-[minmax(0,1fr)_170px_auto]">
             <div>
               <p className="text-[10px] uppercase tracking-[0.35em] text-white/55">
                 Nueva invitación
@@ -570,8 +570,8 @@ export default function AdminPage() {
         </section>
 
         <section className="mt-8">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="relative w-full lg:max-w-md">
+          <div className="min-w-0 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="relative min-w-0 w-full lg:max-w-md">
               <Search
                 size={18}
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-[#42594a]/40"
@@ -585,7 +585,7 @@ export default function AdminPage() {
               />
             </div>
 
-            <div className="flex gap-2 overflow-x-auto pb-1">
+            <div className="flex w-full min-w-0 gap-2 overflow-x-auto pb-1 lg:w-auto">
               <FilterButton
                 active={filter === "ALL"}
                 onClick={() => setFilter("ALL")}
