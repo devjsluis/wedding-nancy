@@ -490,7 +490,7 @@ export default function AdminPage() {
 
         <section className="mt-8 rounded-[2rem] bg-[#6a424c] p-6 text-white shadow-lg shadow-[#6a424c]/10 md:p-8">
           <div className="grid min-w-0 items-end gap-6 lg:grid-cols-[minmax(0,1fr)_170px_auto]">
-            <div>
+            <div className="min-w-0">
               <p className="text-[10px] uppercase tracking-[0.35em] text-white/55">
                 Nueva invitación
               </p>
@@ -512,7 +512,7 @@ export default function AdminPage() {
               />
             </div>
 
-            <div>
+            <div className="min-w-0">
               <label className="block text-sm text-white/70">
                 Lugares
               </label>
