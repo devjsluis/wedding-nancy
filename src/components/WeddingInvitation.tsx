@@ -14,6 +14,7 @@ import { InvitationCover } from "@/components/InvitationCover";
 
 import { Hero } from "@/components/sections/Hero";
 import { Countdown } from "@/components/sections/Countdown";
+import { Parents } from "@/components/sections/Parents";
 import { EventDetails } from "@/components/sections/EventDetails";
 import { Story } from "@/components/sections/Story";
 import { Gallery } from "@/components/sections/Gallery";
@@ -152,6 +153,7 @@ export function WeddingInvitation() {
       <main className="min-h-screen bg-[#f8f5ef] text-[#42594a]">
         <Hero />
         <Countdown />
+        <Parents />
         <EventDetails />
         <Story />
         <Gallery />

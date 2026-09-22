@@ -2,8 +2,14 @@ const MAP_URL = "https://maps.app.goo.gl/RPWU2QoGTuWsQLMF6";
 
 export function EventDetails() {
   return (
-    <section className="relative overflow-hidden border-t border-[#42594a]/10 bg-[#f8f5ef] py-24 md:py-32">
-      <div className="mx-auto max-w-4xl px-6 text-center">
+    <section className="relative overflow-hidden bg-[#f3ebe8]">
+      {/* Transición suave desde la sección anterior */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-24 bg-[#f8f5ef] [clip-path:ellipse(70%_55%_at_50%_0%)] md:h-32"
+      />
+
+      <div className="relative mx-auto max-w-4xl px-6 pb-24 pt-32 text-center md:pb-32 md:pt-40">
 
         {/* Encabezado */}
         <p className="text-xs uppercase tracking-[0.45em] text-[#6a424c] md:text-sm">
