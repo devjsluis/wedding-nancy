@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useEffectEvent, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import {
   AlertCircle,
   ArrowRight,
   LoaderCircle,
+  Music,
+  Pause,
   RefreshCw,
   Search,
 } from "lucide-react";
@@ -36,6 +38,8 @@ type InvitationResolution =
 
 export function WeddingInvitation() {
   const [opened, setOpened] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const [resolution, setResolution] =
     useState<InvitationResolution>("checking");
@@ -101,6 +105,41 @@ export function WeddingInvitation() {
     return () => window.clearTimeout(timeoutId);
   }, []);
 
+  async function handleOpenInvitation() {
+    const audio = audioRef.current;
+
+    if (audio) {
+      audio.currentTime = 0;
+
+      try {
+        await audio.play();
+        setIsMusicPlaying(true);
+      } catch (error) {
+        console.warn("El navegador no permitió iniciar el audio:", error);
+        setIsMusicPlaying(false);
+      }
+    }
+
+    setOpened(true);
+  }
+
+  async function toggleMusic() {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (audio.paused) {
+      try {
+        await audio.play();
+        setIsMusicPlaying(true);
+      } catch (error) {
+        console.warn("No se pudo reproducir el audio:", error);
+      }
+    } else {
+      audio.pause();
+      setIsMusicPlaying(false);
+    }
+  }
+
   function openPublicInvitation() {
     window.history.replaceState(
       {},
@@ -145,10 +184,43 @@ export function WeddingInvitation() {
       <AnimatePresence>
         {!opened && (
           <InvitationCover
-            onOpen={() => setOpened(true)}
+            onOpen={() => void handleOpenInvitation()}
           />
         )}
       </AnimatePresence>
+
+      <audio
+        ref={audioRef}
+        src="/audio/me-aduenare-de-ti.mp3"
+        preload="auto"
+        onPlay={() => setIsMusicPlaying(true)}
+        onPause={() => setIsMusicPlaying(false)}
+        onEnded={() => setIsMusicPlaying(false)}
+      />
+
+      {opened && (
+        <button
+          type="button"
+          onClick={() => void toggleMusic()}
+          aria-label={
+            isMusicPlaying
+              ? "Pausar música"
+              : "Reproducir música"
+          }
+          title={
+            isMusicPlaying
+              ? "Pausar música"
+              : "Reproducir música"
+          }
+          className="fixed bottom-5 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#6a424c]/90 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-[#6a424c]"
+        >
+          {isMusicPlaying ? (
+            <Pause size={16} />
+          ) : (
+            <Music size={16} />
+          )}
+        </button>
+      )}
 
       <main className="min-h-screen bg-[#f8f5ef] text-[#42594a]">
         <Hero />
