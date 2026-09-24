@@ -22,6 +22,7 @@ import { Story } from "@/components/sections/Story";
 import { Gallery } from "@/components/sections/Gallery";
 import { DressCode } from "@/components/sections/DressCode";
 import { Hotels } from "@/components/sections/Hotels";
+import { GiftRegistry } from "@/components/sections/GiftRegistry";
 import { Banner } from "@/components/sections/Banner";
 import { RSVP } from "@/components/sections/RSVP";
 import { Footer } from "@/components/sections/Footer";
@@ -44,11 +45,9 @@ export function WeddingInvitation() {
   const [resolution, setResolution] =
     useState<InvitationResolution>("checking");
 
-  const [invitation, setInvitation] =
-    useState<Invitation | null>(null);
+  const [invitation, setInvitation] = useState<Invitation | null>(null);
 
-  const [requestedCode, setRequestedCode] =
-    useState<string | null>(null);
+  const [requestedCode, setRequestedCode] = useState<string | null>(null);
 
   async function resolveInvitation() {
     const params = new URLSearchParams(window.location.search);
@@ -73,9 +72,7 @@ export function WeddingInvitation() {
       setInvitation(null);
 
       const status =
-        typeof error === "object" &&
-        error !== null &&
-        "response" in error
+        typeof error === "object" && error !== null && "response" in error
           ? (
               error as {
                 response?: {
@@ -141,11 +138,7 @@ export function WeddingInvitation() {
   }
 
   function openPublicInvitation() {
-    window.history.replaceState(
-      {},
-      "",
-      window.location.pathname,
-    );
+    window.history.replaceState({}, "", window.location.pathname);
 
     setRequestedCode(null);
     setInvitation(null);
@@ -183,9 +176,7 @@ export function WeddingInvitation() {
     <>
       <AnimatePresence>
         {!opened && (
-          <InvitationCover
-            onOpen={() => void handleOpenInvitation()}
-          />
+          <InvitationCover onOpen={() => void handleOpenInvitation()} />
         )}
       </AnimatePresence>
 
@@ -202,23 +193,11 @@ export function WeddingInvitation() {
         <button
           type="button"
           onClick={() => void toggleMusic()}
-          aria-label={
-            isMusicPlaying
-              ? "Pausar música"
-              : "Reproducir música"
-          }
-          title={
-            isMusicPlaying
-              ? "Pausar música"
-              : "Reproducir música"
-          }
-          className="fixed bottom-5 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#6a424c]/90 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-[#6a424c]"
+          aria-label={isMusicPlaying ? "Pausar música" : "Reproducir música"}
+          title={isMusicPlaying ? "Pausar música" : "Reproducir música"}
+          className="fixed bottom-5 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#6a424c]/90 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-[#6a424c] cursor-pointer"
         >
-          {isMusicPlaying ? (
-            <Pause size={16} />
-          ) : (
-            <Music size={16} />
-          )}
+          {isMusicPlaying ? <Pause size={16} /> : <Music size={16} />}
         </button>
       )}
 
@@ -231,12 +210,10 @@ export function WeddingInvitation() {
         <Gallery />
         <DressCode />
         <Hotels />
+        <GiftRegistry />
         <Banner />
 
-        <RSVP
-          initialInvitation={invitation}
-          initialCode={requestedCode}
-        />
+        <RSVP initialInvitation={invitation} initialCode={requestedCode} />
 
         <Footer />
       </main>
@@ -252,19 +229,14 @@ function InvitationChecking() {
 
       <div className="relative text-center">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm">
-          <LoaderCircle
-            size={23}
-            className="animate-spin text-[#6a424c]"
-          />
+          <LoaderCircle size={23} className="animate-spin text-[#6a424c]" />
         </div>
 
         <p className="mt-7 text-[10px] uppercase tracking-[0.45em] text-[#6a424c]">
           Valeria &amp; Jesús
         </p>
 
-        <p className="mt-3 font-serif text-2xl">
-          Preparando tu invitación
-        </p>
+        <p className="mt-3 font-serif text-2xl">Preparando tu invitación</p>
 
         <p className="mt-3 text-xs text-[#42594a]/40">
           Un momento, por favor...
@@ -301,10 +273,7 @@ function InvitationProblem({
           {notFound ? (
             <Search size={25} strokeWidth={1.5} />
           ) : (
-            <AlertCircle
-              size={25}
-              strokeWidth={1.5}
-            />
+            <AlertCircle size={25} strokeWidth={1.5} />
           )}
         </div>
 
