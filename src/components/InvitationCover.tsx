@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface InvitationCoverProps {
@@ -93,9 +94,14 @@ export function InvitationCover({ onOpen }: InvitationCoverProps) {
           }}
           className="relative"
         >
-          <div className="font-serif text-[8rem] font-light leading-[0.75] tracking-[-0.12em] text-[#171512] sm:text-[10rem] md:text-[12rem]">
-            V<span className="relative -left-3 italic">J</span>
-          </div>
+          <Image
+            src="/images/monogram.png"
+            alt="Monograma de Valeria y Jesús"
+            width={500}
+            height={500}
+            priority
+            className="h-auto w-[210px] object-contain sm:w-[240px] md:w-[270px]"
+          />
         </motion.div>
 
         {/* Fecha */}
@@ -106,7 +112,7 @@ export function InvitationCover({ onOpen }: InvitationCoverProps) {
             duration: 0.8,
             delay: 0.45,
           }}
-          className="mt-7 text-[12px] tracking-[0.48em] text-[#29241f] sm:text-sm"
+          className="mt-4 text-[12px] tracking-[0.48em] text-[#29241f] sm:text-sm"
         >
           19 · 12 · 26
         </motion.p>
