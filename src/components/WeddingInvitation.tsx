@@ -18,6 +18,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Countdown } from "@/components/sections/Countdown";
 import { Parents } from "@/components/sections/Parents";
 import { EventDetails } from "@/components/sections/EventDetails";
+import { Timeline } from "@/components/sections/Timeline";
 import { Story } from "@/components/sections/Story";
 import { Gallery } from "@/components/sections/Gallery";
 import { DressCode } from "@/components/sections/DressCode";
@@ -206,6 +207,7 @@ export function WeddingInvitation() {
         <Countdown />
         <Parents />
         <EventDetails />
+        <Timeline />
         <Story />
         <Gallery />
         <DressCode />

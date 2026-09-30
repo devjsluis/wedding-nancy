@@ -265,7 +265,9 @@ export function RSVP({
 
           <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#42594a]/60 md:text-base">
             Tu presencia hará aún más especial este día.
-            Ayúdanos confirmando si podrás acompañarnos.
+            <span className="mt-1 block">
+              Agradecemos confirmar tu asistencia antes del 1 de noviembre.
+            </span>
           </p>
         </div>
 
