@@ -41,15 +41,16 @@ export function DressCode() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mx-auto mt-10 max-w-2xl"
+          className="mx-auto max-w-2xl"
         >
-          <div className="relative mx-auto h-[360px] max-w-2xl overflow-hidden rounded-[2rem] bg-[#f8f5ef] shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:h-[430px] md:h-[500px]">
+          <div className="relative mx-auto h-[360px] w-full bg-transparent sm:h-[430px] md:h-[500px]">
             <Image
               src="/images/dress-code.png"
               alt="Referencia de vestimenta elegante formal"
               fill
-              className="object-cover object-[center_45%]"
+              className="object-contain"
               sizes="(max-width: 768px) 90vw, 650px"
+              priority={false}
             />
           </div>
         </motion.div>
@@ -60,7 +61,7 @@ export function DressCode() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mt-16 max-w-2xl border-t border-white/15 pt-14 md:mt-20 md:pt-16"
+          className="mx-auto max-w-2xl border-t border-white/15 pt-14 md:mt-20 md:pt-16"
         >
           <p className="font-serif text-2xl italic text-white/70 sm:text-3xl">
             Después del &ldquo;sí&rdquo;, comienza la fiesta

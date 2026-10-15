@@ -209,7 +209,7 @@ export function WeddingInvitation() {
         <EventDetails />
         <Timeline />
         <Story />
-        <Gallery />
+        {/* <Gallery /> */}
         <DressCode />
         <Hotels />
         <GiftRegistry />

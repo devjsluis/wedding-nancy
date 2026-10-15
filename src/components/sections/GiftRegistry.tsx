@@ -97,7 +97,7 @@ export function GiftRegistry() {
     <section
       id="mesa-de-regalos"
       aria-labelledby="mesa-de-regalos-titulo"
-      className="relative overflow-hidden bg-[#6a424c] py-24 md:py-32"
+      className="relative overflow-hidden bg-[#6a424c] py-16 md:py-28"
     >
       {/* Elementos decorativos */}
       <div
@@ -109,7 +109,7 @@ export function GiftRegistry() {
         className="pointer-events-none absolute -right-48 bottom-10 h-96 w-96 rounded-full border border-white/10"
       />
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Encabezado */}
         <motion.div
           {...reveal(reduceMotion)}
@@ -136,7 +136,7 @@ export function GiftRegistry() {
         </motion.div>
 
         {/* Opciones: lista semántica; los divisores los pone `divide-*` */}
-        <ul className="mx-auto mt-16 grid max-w-4xl divide-y divide-white/15 md:mt-20 md:grid-cols-2 md:divide-x md:divide-y-0">
+        <ul className="mx-auto mt-12 grid w-full max-w-4xl grid-cols-2 divide-x divide-white/20 md:mt-20">
           {METHODS.map((method, i) => (
             <GiftOption
               key={method.id}
@@ -200,24 +200,26 @@ function GiftOption({
   return (
     <motion.li
       {...reveal(reduceMotion, delay, 0.25)}
-      className="relative px-4 py-10 text-center sm:px-10 md:px-14 md:py-6"
+      className="flex min-w-0 flex-col items-center px-2 py-4 text-center sm:px-8 md:px-14"
     >
-      <p className="text-[11px] uppercase tracking-[0.3em] text-white/60">
+      <p className="min-h-8 text-[9px] uppercase leading-4 tracking-[0.15em] text-white/60 sm:text-[11px] sm:tracking-[0.3em]">
         {label}
       </p>
 
-      <h3 className="mt-5 font-serif text-5xl font-light italic text-[#f1ded9]">
+      <h3 className="mt-3 font-serif text-3xl font-light italic text-[#f1ded9] sm:mt-5 sm:text-5xl">
         {service}
       </h3>
 
-      <div aria-hidden="true" className="mx-auto my-8 h-px w-10 bg-white/25" />
+      <div
+        aria-hidden="true"
+        className="my-5 h-px w-8 bg-white/25 sm:my-8 sm:w-10"
+      />
 
-      <p className="text-[11px] uppercase tracking-[0.3em] text-white/65">
+      <p className="text-[9px] uppercase tracking-[0.2em] text-white/65 sm:text-[11px]">
         {fieldLabel}
       </p>
 
-      {/* select-all: con un toque largo se selecciona todo si el botón fallara */}
-      <p className="mx-auto mt-4 select-all break-words font-serif text-2xl leading-relaxed tabular-nums text-[#f8f5ef] sm:text-3xl">
+      <p className="mt-3 w-full select-all break-all font-serif text-[clamp(0.85rem,3.4vw,1.5rem)] leading-relaxed tabular-nums text-[#f8f5ef] sm:mt-4 sm:break-words sm:text-2xl md:text-3xl">
         {displayValue}
       </p>
 
@@ -225,40 +227,37 @@ function GiftOption({
         type="button"
         onClick={handleCopy}
         aria-label={`Copiar ${fieldLabel} de ${service}`}
-        className="mt-3 inline-flex min-h-11 min-w-[9.5rem] items-center justify-center gap-2 border-b border-white/30 px-2 text-[11px] uppercase tracking-[0.22em] text-white/85 transition hover:border-white hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+        className="mt-3 inline-flex min-h-10 items-center justify-center gap-1.5 border-b border-white/30 px-2 text-[9px] uppercase tracking-[0.15em] text-white/85 transition hover:border-white hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-11 sm:gap-2 sm:text-[11px]"
       >
-        {state === "copied" && (
+        {state === "copied" ? (
           <>
-            <Check size={14} aria-hidden="true" />
+            <Check size={13} aria-hidden="true" />
             Copiado
           </>
-        )}
-        {state === "error" && (
+        ) : state === "error" ? (
           <>
-            <X size={14} aria-hidden="true" />
-            Cópialo a mano
+            <X size={13} aria-hidden="true" />
+            Error
           </>
-        )}
-        {state === "idle" && (
+        ) : (
           <>
-            <Copy size={14} aria-hidden="true" />
+            <Copy size={13} aria-hidden="true" />
             Copiar
           </>
         )}
       </button>
 
-      {/* Anuncio para lectores de pantalla */}
       <span role="status" aria-live="polite" className="sr-only">
         {state === "copied" && `${fieldLabel} de ${service} copiado`}
         {state === "error" && `No se pudo copiar el ${fieldLabel}`}
       </span>
 
-      <div className="mt-8">
-        <p className="text-[11px] uppercase tracking-[0.28em] text-white/60">
+      <div className="mt-6 w-full sm:mt-8">
+        <p className="text-[9px] uppercase tracking-[0.15em] text-white/60 sm:text-[11px] sm:tracking-[0.28em]">
           A nombre de
         </p>
 
-        <p className="mt-3 font-serif text-xl italic leading-relaxed text-white/90 sm:text-2xl">
+        <p className="mt-3 font-serif text-sm italic leading-relaxed text-white/90 sm:text-xl md:text-2xl">
           {owner}
         </p>
       </div>

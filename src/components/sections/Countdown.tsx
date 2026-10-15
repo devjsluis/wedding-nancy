@@ -54,12 +54,8 @@ export function Countdown() {
       />
 
       <div className="relative mx-auto max-w-5xl px-5 text-center">
-        <p className="text-xs uppercase tracking-[0.5em] text-white/65 md:text-sm">
-          Cuenta regresiva
-        </p>
-
         <h2 className="mt-5 font-serif text-5xl italic leading-none text-white md:text-6xl">
-          Faltan
+          Nos vemos en
         </h2>
 
         <div className="mx-auto mt-7 h-px w-16 bg-white/45" />

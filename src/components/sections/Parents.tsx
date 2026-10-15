@@ -26,20 +26,14 @@ export function Parents() {
           Nuestros padres
         </h2>
 
-        <div className="mx-auto mt-8 flex max-w-[180px] items-center gap-3">
-          <span className="h-px flex-1 bg-[#6a424c]/25" />
-          <span className="font-serif text-lg text-[#6a424c]/55">♡</span>
-          <span className="h-px flex-1 bg-[#6a424c]/25" />
-        </div>
-
-        <div className="mx-auto mt-14 grid max-w-3xl gap-12 md:grid-cols-2 md:gap-8">
+        <div className="mx-auto mt-14 grid max-w-3xl gap-8 grid-cols-2 ">
           <ParentGroup
-            label="Padres de la novia"
+            label="De la novia"
             names={["Juan Carlos Nuño", "Angélica María Pérez"]}
           />
 
           <ParentGroup
-            label="Padres del novio"
+            label="Del novio"
             names={["Ricardo Salcedo", "Sandra Luz Rosas"]}
           />
         </div>
@@ -59,7 +53,7 @@ function ParentGroup({ label, names }: { label: string; names: string[] }) {
         {names.map((name) => (
           <p
             key={name}
-            className="font-serif text-2xl leading-tight text-[#42594a] sm:text-3xl"
+            className="font-serif text-xl leading-tight text-[#42594a] sm:text-2xl"
           >
             {name}
           </p>
