@@ -6,7 +6,7 @@ export function Footer() {
         {/* Ornamento */}
         <div className="mx-auto flex max-w-[150px] items-center gap-3">
           <span className="h-px flex-1 bg-white/25" />
-          <span className="font-serif text-lg text-[#f0d4cf]/80">♡</span>
+          <span className="font-wedding-body text-lg text-[#f0d4cf]/80">♡</span>
           <span className="h-px flex-1 bg-white/25" />
         </div>
 
@@ -14,7 +14,7 @@ export function Footer() {
           Gracias por acompañarnos
         </p>
 
-        <h2 className="mt-6 whitespace-nowrap font-serif text-[clamp(2.7rem,10vw,4.5rem)] font-light leading-none">
+        <h2 className="mt-6 whitespace-nowrap font-wedding-title text-[clamp(2.7rem,10vw,4.5rem)] font-light leading-none">
           Valeria <span className="italic text-[#f0d4cf]">&amp;</span> Jesús
         </h2>
 
@@ -28,7 +28,7 @@ export function Footer() {
           Mascota, Jalisco
         </p>
 
-        <p className="mt-9 font-serif text-lg italic text-[#f0d4cf]/80 md:text-xl">
+        <p className="mt-9 font-wedding-body text-lg italic text-[#f0d4cf]/80 md:text-xl">
           Nos encantará compartir este día contigo.
         </p>
       </div>

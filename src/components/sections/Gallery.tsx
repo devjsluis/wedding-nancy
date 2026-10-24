@@ -103,7 +103,7 @@ export function Gallery() {
             Galería
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl text-[#42594a] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-4 font-wedding-title text-4xl text-[#42594a] sm:text-5xl lg:text-6xl">
             Algunos momentos nuestros
           </h2>
 
@@ -173,7 +173,7 @@ export function Gallery() {
               }
             `}
                         >
-                          <span className="font-serif text-2xl italic sm:text-3xl">
+                          <span className="font-wedding-script text-2xl italic sm:text-3xl">
                             Nuestro recuerdo
                           </span>
 

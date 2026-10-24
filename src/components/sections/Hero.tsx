@@ -23,11 +23,11 @@ export function Hero() {
 
       {/* Información principal */}
       <div className="relative z-10 -mt-24 px-6 pb-20 text-center sm:-mt-28 md:-mt-32">
-        <p className="mx-auto max-w-xl font-serif text-xl italic leading-relaxed text-[#6a424c]/80 sm:text-2xl">
+        <p className="mx-auto max-w-xl font-wedding-script text-xl italic leading-relaxed text-[#6a424c]/80 sm:text-2xl">
           Un instante, una promesa, toda una vida
         </p>
 
-        <h1 className="mt-7 font-serif text-5xl leading-[0.95] text-[#6a424c] sm:text-6xl md:text-8xl">
+        <h1 className="mt-7 font-wedding-title text-5xl leading-[0.95] text-[#6a424c] sm:text-6xl md:text-8xl">
           Valeria &amp; Jesús
         </h1>
 

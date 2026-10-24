@@ -63,14 +63,14 @@ export function Timeline() {
             Nuestro gran día
           </p>
 
-          <h2 className="mt-6 font-serif text-5xl font-light text-[#42594a] sm:text-6xl md:text-7xl">
+          <h2 className="mt-6 font-wedding-title text-5xl font-light text-[#42594a] sm:text-6xl md:text-7xl">
             Orden del
             <span className="ml-3 italic text-[#6a424c]">día</span>
           </h2>
 
           <div className="mx-auto mt-8 flex max-w-[150px] items-center gap-3">
             <span className="h-px flex-1 bg-[#6a424c]/20" />
-            <span className="font-serif text-lg text-[#6a424c]/50">♡</span>
+            <span className="font-wedding-body text-lg text-[#6a424c]/50">♡</span>
             <span className="h-px flex-1 bg-[#6a424c]/20" />
           </div>
         </motion.div>
@@ -103,7 +103,7 @@ export function Timeline() {
                   <div className="pr-4 text-right md:pr-8">
                     {left ? (
                       <>
-                        <p className="font-serif text-2xl italic text-[#6a424c] sm:text-3xl">
+                        <p className="font-wedding-script text-2xl italic text-[#6a424c] sm:text-3xl">
                           {event.time}
                         </p>
                         <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-[#42594a]/60 sm:text-xs">
@@ -126,7 +126,7 @@ export function Timeline() {
                       <IconBlock Icon={Icon} />
                     ) : (
                       <>
-                        <p className="font-serif text-2xl italic text-[#6a424c] sm:text-3xl">
+                        <p className="font-wedding-script text-2xl italic text-[#6a424c] sm:text-3xl">
                           {event.time}
                         </p>
                         <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-[#42594a]/60 sm:text-xs">
@@ -147,7 +147,7 @@ export function Timeline() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-20 text-center font-serif text-xl italic text-[#6a424c]/70 md:text-2xl"
+          className="mt-20 text-center font-wedding-script text-xl italic text-[#6a424c]/70 md:text-2xl"
         >
           Celebremos juntos cada momento.
         </motion.p>

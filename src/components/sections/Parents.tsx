@@ -22,7 +22,7 @@ export function Parents() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative mx-auto max-w-4xl text-center"
       >
-        <h2 className="font-serif text-5xl font-light text-[#42594a] sm:text-6xl">
+        <h2 className="font-wedding-title text-5xl font-light text-[#42594a] sm:text-6xl">
           Nuestros padres
         </h2>
 
@@ -45,7 +45,7 @@ export function Parents() {
 function ParentGroup({ label, names }: { label: string; names: string[] }) {
   return (
     <div className="relative">
-      <p className="font-serif text-2xl italic text-[#6a424c]/75 sm:text-3xl">
+      <p className="font-wedding-script text-2xl italic text-[#6a424c]/75 sm:text-3xl">
         {label}
       </p>
 
@@ -53,7 +53,7 @@ function ParentGroup({ label, names }: { label: string; names: string[] }) {
         {names.map((name) => (
           <p
             key={name}
-            className="font-serif text-xl leading-tight text-[#42594a] sm:text-2xl"
+            className="font-wedding-script text-xl leading-tight text-[#42594a] sm:text-2xl"
           >
             {name}
           </p>

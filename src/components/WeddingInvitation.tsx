@@ -2,6 +2,7 @@
 
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   AlertCircle,
   ArrowRight,
@@ -217,6 +218,17 @@ export function WeddingInvitation() {
 
         <RSVP initialInvitation={invitation} initialCode={requestedCode} />
 
+        <div className="bg-[#f8f5ef] px-5 py-12 sm:py-16">
+          <Image
+            src="/images/couple-closing.webp"
+            alt="Jesús abrazando a Valeria mientras ella sonríe"
+            width={1365}
+            height={2048}
+            sizes="(max-width: 640px) calc(100vw - 40px), 576px"
+            className="mx-auto h-auto w-full max-w-xl rounded-2xl"
+          />
+        </div>
+
         <Footer />
       </main>
     </>
@@ -238,7 +250,7 @@ function InvitationChecking() {
           Valeria &amp; Jesús
         </p>
 
-        <p className="mt-3 font-serif text-2xl">Preparando tu invitación</p>
+        <p className="mt-3 font-wedding-script text-2xl">Preparando tu invitación</p>
 
         <p className="mt-3 text-xs text-[#42594a]/40">
           Un momento, por favor...
@@ -279,7 +291,7 @@ function InvitationProblem({
           )}
         </div>
 
-        <h1 className="mt-7 font-serif text-4xl font-light sm:text-5xl">
+        <h1 className="mt-7 font-wedding-title text-4xl font-light sm:text-5xl">
           {notFound
             ? "Invitación no encontrada"
             : "No pudimos verificar tu invitación"}
@@ -323,7 +335,7 @@ function InvitationProblem({
           </button>
         </div>
 
-        <p className="mt-10 font-serif text-sm italic text-[#6a424c]/50">
+        <p className="mt-10 font-wedding-body text-sm italic text-[#6a424c]/50">
           19 · 12 · 26
         </p>
       </div>

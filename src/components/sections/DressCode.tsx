@@ -28,7 +28,7 @@ export function DressCode() {
             Código de vestimenta
           </p>
 
-          <h2 className="mt-7 font-serif text-5xl font-light italic text-[#f8f5ef] sm:text-6xl md:text-7xl">
+          <h2 className="mt-7 font-wedding-title text-5xl font-light italic text-[#f8f5ef] sm:text-6xl md:text-7xl">
             Elegante formal
           </h2>
 
@@ -45,9 +45,10 @@ export function DressCode() {
         >
           <div className="relative mx-auto h-[360px] w-full bg-transparent sm:h-[430px] md:h-[500px]">
             <Image
-              src="/images/dress-code.png"
+              src="/images/dress-code-transparent.png"
               alt="Referencia de vestimenta elegante formal"
               fill
+              unoptimized
               className="object-contain"
               sizes="(max-width: 768px) 90vw, 650px"
               priority={false}
@@ -63,13 +64,13 @@ export function DressCode() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-2xl border-t border-white/15 pt-14 md:mt-20 md:pt-16"
         >
-          <p className="font-serif text-2xl italic text-white/70 sm:text-3xl">
+          <p className="font-wedding-script text-2xl italic text-white/70 sm:text-3xl">
             Después del &ldquo;sí&rdquo;, comienza la fiesta
           </p>
 
           <div className="mx-auto mt-7 flex max-w-[180px] items-center gap-3">
             <span className="h-px flex-1 bg-white/25" />
-            <span className="font-serif text-lg text-white/50">♡</span>
+            <span className="font-wedding-body text-lg text-white/50">♡</span>
             <span className="h-px flex-1 bg-white/25" />
           </div>
 

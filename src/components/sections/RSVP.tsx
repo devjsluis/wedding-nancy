@@ -249,7 +249,7 @@ export function RSVP({
             RSVP
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl font-light text-[#42594a] sm:text-5xl md:text-6xl">
+          <h2 className="mt-4 font-wedding-title text-4xl font-light text-[#42594a] sm:text-5xl md:text-6xl">
             Confirma tu asistencia
           </h2>
 
@@ -288,7 +288,7 @@ export function RSVP({
                 19 · 12 · 26
               </p>
 
-              <p className="mt-3 font-serif text-4xl">
+              <p className="mt-3 font-wedding-title text-4xl">
                 Jesús &amp; Valeria
               </p>
             </div>
@@ -361,7 +361,7 @@ function InvitationSearch({
         Tu invitación
       </p>
 
-      <h3 className="mt-3 font-serif text-3xl text-[#42594a] sm:text-4xl">
+      <h3 className="mt-3 font-wedding-script text-3xl text-[#42594a] sm:text-4xl">
         Busca tu invitación
       </h3>
 
@@ -469,7 +469,7 @@ function InvitationForm({
         Invitación para
       </p>
 
-      <h3 className="mt-3 font-serif text-4xl leading-tight text-[#42594a] md:text-5xl">
+      <h3 className="mt-3 font-wedding-title text-4xl leading-tight text-[#42594a] md:text-5xl">
         {invitation.groupName}
       </h3>
 
@@ -500,7 +500,7 @@ function InvitationForm({
       )}
 
       <div className="mt-8">
-        <p className="font-serif text-2xl text-[#42594a]">
+        <p className="font-wedding-script text-2xl text-[#42594a]">
           ¿Podrán acompañarnos?
         </p>
 
@@ -527,7 +527,7 @@ function InvitationForm({
         <div className="mt-9">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="font-serif text-2xl text-[#42594a]">
+              <p className="font-wedding-script text-2xl text-[#42594a]">
                 ¿Quiénes asistirán?
               </p>
 
@@ -591,7 +591,7 @@ function InvitationForm({
 
       {answer && (
         <div className="mt-9 space-y-4">
-          <p className="font-serif text-2xl text-[#42594a]">
+          <p className="font-wedding-script text-2xl text-[#42594a]">
             Datos de contacto
           </p>
 
@@ -738,7 +738,7 @@ function SavedResponse({
         Respuesta recibida
       </p>
 
-      <h3 className="mt-3 font-serif text-4xl text-[#42594a]">
+      <h3 className="mt-3 font-wedding-title text-4xl text-[#42594a]">
         {attending
           ? "¡Nos vemos en la boda!"
           : "Gracias por avisarnos"}

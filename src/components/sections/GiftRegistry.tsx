@@ -121,7 +121,7 @@ export function GiftRegistry() {
 
           <h2
             id="mesa-de-regalos-titulo"
-            className="mt-6 font-serif text-5xl font-light leading-none text-[#f8f5ef] sm:text-6xl md:text-7xl"
+            className="mt-6 font-wedding-title text-5xl font-light leading-none text-[#f8f5ef] sm:text-6xl md:text-7xl"
           >
             El mejor regalo
             <span className="mt-2 block italic text-[#f1ded9]">
@@ -153,11 +153,11 @@ export function GiftRegistry() {
           className="mx-auto mt-16 flex max-w-[190px] items-center gap-3"
         >
           <span className="h-px flex-1 bg-white/20" />
-          <span className="font-serif text-xl text-white/60">♡</span>
+          <span className="font-wedding-script text-xl text-white/60">♡</span>
           <span className="h-px flex-1 bg-white/20" />
         </div>
 
-        <p className="mt-6 text-center font-serif text-xl italic text-[#f1ded9]/80">
+        <p className="mt-6 text-center font-wedding-script text-xl italic text-[#f1ded9]/80">
           Gracias por acompañarnos en este comienzo.
         </p>
       </div>
@@ -206,7 +206,7 @@ function GiftOption({
         {label}
       </p>
 
-      <h3 className="mt-3 font-serif text-3xl font-light italic text-[#f1ded9] sm:mt-5 sm:text-5xl">
+      <h3 className="mt-3 font-wedding-script text-3xl font-light italic text-[#f1ded9] sm:mt-5 sm:text-5xl">
         {service}
       </h3>
 
@@ -219,7 +219,7 @@ function GiftOption({
         {fieldLabel}
       </p>
 
-      <p className="mt-3 w-full select-all break-all font-serif text-[clamp(0.85rem,3.4vw,1.5rem)] leading-relaxed tabular-nums text-[#f8f5ef] sm:mt-4 sm:break-words sm:text-2xl md:text-3xl">
+      <p className="mt-3 w-full select-all break-all font-wedding-body text-[clamp(0.85rem,3.4vw,1.5rem)] leading-relaxed tabular-nums text-[#f8f5ef] sm:mt-4 sm:break-words sm:text-2xl md:text-3xl">
         {displayValue}
       </p>
 
@@ -257,7 +257,7 @@ function GiftOption({
           A nombre de
         </p>
 
-        <p className="mt-3 font-serif text-sm italic leading-relaxed text-white/90 sm:text-xl md:text-2xl">
+        <p className="mt-3 font-wedding-body text-sm italic leading-relaxed text-white/90 sm:text-xl md:text-2xl">
           {owner}
         </p>
       </div>

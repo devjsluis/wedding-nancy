@@ -23,10 +23,13 @@ export function EventDetails() {
 
       <div className="relative mx-auto max-w-6xl px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-44">
         {/* Encabezado */}
-        <div className="text-center">
-          <h2 className="mt-5 font-serif text-5xl font-light leading-[1.05] text-[#42594a] sm:text-6xl md:text-7xl">
+        <div className="flex flex-col items-center ">
+          <h2 className="text-center mt-5 font-wedding-title text-5xl font-light leading-[1.05] text-[#42594a] sm:text-6xl md:text-7xl">
             Ceremonia y recepción
           </h2>
+          <p className="mt-5 text-center font-wedding-script text-xl italic leading-snug text-[#6a424c]/85 md:max-w-lg md:text-3xl">
+            Aquí comienza nuestro gran día
+          </p>
         </div>
 
         {/* Composición: arco + tarjeta vino */}
@@ -76,7 +79,7 @@ export function EventDetails() {
                   Nos vemos en
                 </p>
 
-                <h3 className="mt-5 font-serif text-4xl font-light leading-[0.95] sm:text-5xl md:text-[3rem]">
+                <h3 className="mt-5 font-wedding-title text-4xl font-light leading-[0.95] sm:text-5xl md:text-[3rem]">
                   Quinta
                   <span className="mt-1 block italic">El Pedregal</span>
                 </h3>
@@ -90,7 +93,7 @@ export function EventDetails() {
                   className="mx-auto my-7 flex max-w-[140px] items-center gap-3"
                 >
                   <span className="h-px flex-1 bg-white/25" />
-                  <span className="font-serif text-base text-white/60">♡</span>
+                  <span className="font-wedding-body text-base text-white/60">♡</span>
                   <span className="h-px flex-1 bg-white/25" />
                 </div>
 
@@ -98,7 +101,7 @@ export function EventDetails() {
                   Mascota · Jalisco
                 </p>
 
-                <p className="mt-7 font-serif text-5xl italic leading-none">
+                <p className="mt-7 font-wedding-body text-5xl italic leading-none">
                   5:00 <span className="text-2xl">p.m.</span>
                 </p>
 
@@ -128,13 +131,14 @@ export function EventDetails() {
           </div>
         </div>
 
-        {/* Cierre */}
-        <div className="mt-16 flex flex-col items-center gap-5 md:mt-24">
-          <span aria-hidden="true" className="h-12 w-px bg-[#6a424c]/25" />
-          <p className="max-w-xs text-center font-serif text-xl italic leading-snug text-[#6a424c]/85 md:max-w-lg md:text-3xl">
-            Aquí comienza nuestro gran día
-          </p>
-        </div>
+        <Image
+          src="/images/couple-ceremony.webp"
+          alt="Valeria y Jesús sonriendo frente a frente"
+          width={1365}
+          height={2048}
+          sizes="(max-width: 640px) calc(100vw - 40px), 448px"
+          className="mx-auto mt-12 h-auto w-full max-w-md rounded-t-full rounded-b-2xl md:mt-16"
+        />
       </div>
     </section>
   );

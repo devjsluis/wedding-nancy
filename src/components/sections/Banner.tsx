@@ -18,16 +18,16 @@ export function Banner() {
         <div className="mx-auto max-w-4xl">
           <div className="mx-auto mb-7 flex max-w-[150px] items-center gap-3">
             <span className="h-px flex-1 bg-white/35" />
-            <span className="font-serif text-lg text-white/65">♡</span>
+            <span className="font-wedding-body text-lg text-white/65">♡</span>
             <span className="h-px flex-1 bg-white/35" />
           </div>
 
           <div className="mx-auto whitespace-nowrap">
-            <p className="font-serif text-[clamp(1.45rem,5.6vw,3.4rem)] font-light leading-[1.2] text-white">
+            <p className="font-wedding-title text-[clamp(1.45rem,5.6vw,3.4rem)] font-light leading-[1.2] text-white">
               Cada historia de amor es hermosa,
             </p>
 
-            <p className="mt-3 font-serif text-[clamp(1.35rem,5.2vw,3.25rem)] font-light italic leading-[1.2] text-[#f1ded9] md:mt-4">
+            <p className="mt-3 font-wedding-title text-[clamp(1.35rem,5.2vw,3.25rem)] font-light italic leading-[1.2] text-[#f1ded9] md:mt-4">
               pero la nuestra es nuestra favorita.
             </p>
           </div>

@@ -16,13 +16,7 @@ export function Story() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         {/* Texto */}
         <div className="text-center lg:text-left">
-          <p className="text-xs uppercase tracking-[0.5em] text-white/65 md:text-sm">
-            Nuestra historia
-          </p>
-
-          <div className="mx-auto mt-6 h-px w-14 bg-white/35 lg:mx-0" />
-
-          <h2 className="mt-8 font-serif text-5xl font-light leading-[1.08] text-white md:text-6xl lg:text-[4rem]">
+          <h2 className="mt-2 font-wedding-title text-5xl font-light leading-[1.08] text-white md:text-6xl lg:text-[4rem]">
             El comienzo
             <span className="mt-1 block italic text-[#f1ded9]">
               de algo para siempre
@@ -38,7 +32,7 @@ export function Story() {
           <div className="mt-10 flex items-center justify-center gap-4 lg:justify-start">
             <span className="h-px w-10 bg-white/25" />
 
-            <span className="font-serif text-2xl italic text-[#f1ded9]">
+            <span className="font-wedding-script text-2xl italic text-[#f1ded9]">
               Valeria &amp; Jesús
             </span>
 

@@ -156,7 +156,7 @@ function HotelDetails({ hotel }: { hotel: Hotel }) {
             aria-label={`Copiar código ${hotel.code}`}
             className="inline-flex items-center gap-3 self-start border border-[#6a424c]/20 px-4 py-3 text-[#42594a] transition hover:border-[#6a424c]/50"
           >
-            <span className="font-serif text-base tracking-wider">
+            <span className="font-wedding-body text-base tracking-wider">
               {hotel.code}
             </span>
             {copied ? <Check size={15} /> : <Copy size={15} />}
@@ -231,7 +231,7 @@ export function Hotels() {
 
           <div className="mx-auto mt-5 h-px w-12 bg-[#6a424c]/35" />
 
-          <h2 className="mt-7 font-serif text-4xl font-light leading-tight text-[#42594a] sm:text-5xl md:text-6xl">
+          <h2 className="mt-7 font-wedding-title text-4xl font-light leading-tight text-[#42594a] sm:text-5xl md:text-6xl">
             Para quienes
             <span className="block italic text-[#6a424c]">nos visitan</span>
           </h2>
@@ -256,11 +256,11 @@ export function Hotels() {
                   aria-controls={panelId}
                   className="group flex min-h-[84px] w-full items-center gap-4 py-5 text-left sm:gap-7"
                 >
-                  <span className="shrink-0 font-serif text-sm text-[#6a424c]/45">
+                  <span className="shrink-0 font-wedding-body text-sm text-[#6a424c]/45">
                     {hotel.number}
                   </span>
 
-                  <span className="flex-1 font-serif text-xl font-light text-[#42594a] transition-colors group-hover:text-[#6a424c] sm:text-2xl">
+                  <span className="flex-1 font-wedding-script text-xl font-light text-[#42594a] transition-colors group-hover:text-[#6a424c] sm:text-2xl">
                     {hotel.name}
                   </span>
 
@@ -312,11 +312,11 @@ export function Hotels() {
         <div className="mx-auto mt-12 text-center">
           <div className="mx-auto flex max-w-[150px] items-center gap-3">
             <span className="h-px flex-1 bg-[#6a424c]/20" />
-            <span className="font-serif text-lg text-[#6a424c]/50">♡</span>
+            <span className="font-wedding-body text-lg text-[#6a424c]/50">♡</span>
             <span className="h-px flex-1 bg-[#6a424c]/20" />
           </div>
 
-          <p className="mt-5 font-serif text-sm italic text-[#6a424c]/65">
+          <p className="mt-5 font-wedding-body text-sm italic text-[#6a424c]/65">
             Pregunta por disponibilidad
           </p>
         </div>

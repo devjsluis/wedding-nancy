@@ -54,7 +54,7 @@ export function Countdown() {
       />
 
       <div className="relative mx-auto max-w-5xl px-5 text-center">
-        <h2 className="mt-5 font-serif text-5xl italic leading-none text-white md:text-6xl">
+        <h2 className="mt-5 font-wedding-title text-5xl italic leading-none text-white md:text-6xl">
           Nos vemos en
         </h2>
 
@@ -67,7 +67,7 @@ export function Countdown() {
           <TimeUnit value={timeLeft.seconds} label="segundos" />
         </div>
 
-        <p className="mt-12 font-serif text-xl italic tracking-wide text-white/90 md:mt-14 md:text-2xl">
+        <p className="mt-12 font-wedding-script text-xl italic tracking-wide text-white/90 md:mt-14 md:text-2xl">
           para nuestra boda
         </p>
 
@@ -84,7 +84,7 @@ export function Countdown() {
 function TimeUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="relative px-1 text-center md:px-6">
-      <div className="font-serif text-4xl font-light leading-none text-white sm:text-5xl md:text-6xl">
+      <div className="font-wedding-title text-4xl font-light leading-none text-white sm:text-5xl md:text-6xl">
         {value}
       </div>
 
