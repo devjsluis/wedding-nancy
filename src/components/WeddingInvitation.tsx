@@ -218,13 +218,13 @@ export function WeddingInvitation() {
 
         <RSVP initialInvitation={invitation} initialCode={requestedCode} />
 
-        <div className="bg-[#f8f5ef] px-5 py-12 sm:py-16">
+        <div className="bg-[#f8f5ef] px-5 pb-12 sm:pb-16 lg:hidden">
           <Image
             src="/images/couple-closing.webp"
             alt="Jesús abrazando a Valeria mientras ella sonríe"
             width={1365}
             height={2048}
-            sizes="(max-width: 640px) calc(100vw - 40px), 576px"
+            sizes="(min-width: 1024px) 0px, (max-width: 640px) calc(100vw - 40px), 576px"
             className="mx-auto h-auto w-full max-w-xl rounded-2xl"
           />
         </div>

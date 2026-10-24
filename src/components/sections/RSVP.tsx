@@ -274,10 +274,10 @@ export function RSVP({
         <div className="overflow-hidden rounded-[2rem] bg-[#fffdf9] shadow-[0_24px_80px_rgba(66,89,74,0.08)] lg:grid lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative hidden min-h-[760px] lg:block">
             <Image
-              src="/images/rsvp.webp"
-              alt="Jesús y Valeria"
+              src="/images/couple-closing.webp"
+              alt="Jesús abrazando a Valeria mientras ella sonríe"
               fill
-              sizes="45vw"
+              sizes="(min-width: 1280px) 490px, (min-width: 1024px) 45vw, 0px"
               className="object-cover"
             />
 
