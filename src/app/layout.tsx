@@ -14,8 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://valeriayjesus.netlify.app"),
   title: "Valeria & Jesús",
   description: "Invitación de boda de Valeria y Jesús",
+  openGraph: {
+    title: "Valeria & Jesús",
+    description: "Acompáñanos a celebrar nuestra boda · 19 de diciembre de 2026",
+    type: "website",
+    locale: "es_MX",
+  },
 };
 
 export default function RootLayout({
