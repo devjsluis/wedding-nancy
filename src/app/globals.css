@@ -47,3 +47,17 @@ body {
 .wedding-typography .font-wedding-body {
   font-family: var(--font-bodoni-moda), Georgia, serif;
 }
+
+/* Keep the ampersand consistent across all couple-name treatments. */
+.font-wedding-ampersand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wedding-typography .hero-ampersand {
+  font-family: var(--font-bodoni-moda), Georgia, serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  font-style: italic;
+}

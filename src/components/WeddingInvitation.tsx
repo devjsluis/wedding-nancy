@@ -247,7 +247,7 @@ function InvitationChecking() {
         </div>
 
         <p className="mt-7 text-[10px] uppercase tracking-[0.45em] text-[#6a424c]">
-          Valeria &amp; Jesús
+          Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
         </p>
 
         <p className="mt-3 font-wedding-script text-2xl">Preparando tu invitación</p>
@@ -280,7 +280,7 @@ function InvitationProblem({
 
       <div className="relative w-full max-w-lg text-center">
         <p className="text-[10px] uppercase tracking-[0.45em] text-[#6a424c]">
-          Valeria &amp; Jesús
+          Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
         </p>
 
         <div className="mx-auto mt-8 flex h-16 w-16 items-center justify-center rounded-full bg-[#6a424c]/8 text-[#6a424c]">

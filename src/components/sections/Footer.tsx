@@ -15,7 +15,7 @@ export function Footer() {
         </p>
 
         <h2 className="mt-6 whitespace-nowrap font-wedding-title text-[clamp(2.7rem,10vw,4.5rem)] font-light leading-none">
-          Valeria <span className="italic text-[#f0d4cf]">&amp;</span> Jesús
+          Valeria <span className="font-wedding-ampersand text-[#f0d4cf]">&amp;</span> Jesús
         </h2>
 
         <div className="mx-auto mt-8 h-px w-12 bg-white/25" />

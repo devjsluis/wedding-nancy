@@ -156,7 +156,7 @@ export function InvitationCover({ onOpen }: InvitationCoverProps) {
         transition={{ duration: 1, delay: 1 }}
         className="absolute bottom-8 text-[9px] uppercase tracking-[0.35em] text-[#403a34]"
       >
-        Valeria &amp; Jesús
+        Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
       </motion.p>
     </motion.section>
   );

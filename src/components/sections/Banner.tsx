@@ -35,7 +35,7 @@ export function Banner() {
           <div className="mx-auto mt-8 h-px w-14 bg-white/40" />
 
           <p className="mt-6 text-[10px] uppercase tracking-[0.4em] text-white/65 md:text-xs">
-            Valeria &amp; Jesús
+            Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
           </p>
         </div>
       </div>

@@ -29,12 +29,12 @@ export function Parents() {
         <div className="mx-auto mt-14 grid max-w-3xl gap-8 grid-cols-2 ">
           <ParentGroup
             label="De la novia"
-            names={["Juan Carlos Nuño", "Angélica María Pérez"]}
+            names={["Angélica María Pérez Pérez", "Juan Carlos Nuño García"]}
           />
 
           <ParentGroup
             label="Del novio"
-            names={["Ricardo Salcedo", "Sandra Luz Rosas"]}
+            names={["Sandra Luz Rosas Peña", "Ricardo Salcedo Cortés"]}
           />
         </div>
       </motion.div>

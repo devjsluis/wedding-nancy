@@ -309,7 +309,7 @@ export default function AdminPage() {
         <div className="text-center">
           <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-[#6a424c]/20 border-t-[#6a424c]" />
           <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[#6a424c]/60">
-            Valeria &amp; Jesús
+            Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
           </p>
         </div>
       </main>
@@ -332,7 +332,7 @@ export default function AdminPage() {
           </div>
 
           <p className="mt-7 text-center text-[10px] uppercase tracking-[0.45em] text-[#6a424c]">
-            Valeria &amp; Jesús
+            Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
           </p>
 
           <h1 className="mt-4 text-center font-serif text-4xl font-light md:text-5xl">
@@ -403,7 +403,7 @@ export default function AdminPage() {
         <div className="mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between gap-4 px-5 py-5 md:px-8">
           <div>
             <p className="text-[9px] uppercase tracking-[0.4em] text-[#6a424c] md:text-[10px]">
-              Valeria &amp; Jesús
+              Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
             </p>
 
             <h1 className="mt-1 font-serif text-2xl md:text-3xl">

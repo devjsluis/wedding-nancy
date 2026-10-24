@@ -33,7 +33,7 @@ export function Story() {
             <span className="h-px w-10 bg-white/25" />
 
             <span className="font-wedding-script text-2xl italic text-[#f1ded9]">
-              Valeria &amp; Jesús
+              Valeria <span className="font-wedding-ampersand">&amp;</span> Jesús
             </span>
 
             <span className="h-px w-10 bg-white/25" />

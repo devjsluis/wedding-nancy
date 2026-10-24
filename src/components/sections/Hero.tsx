@@ -28,7 +28,7 @@ export function Hero() {
         </p>
 
         <h1 className="mt-7 font-wedding-title text-5xl leading-[0.95] text-[#6a424c] sm:text-6xl md:text-8xl">
-          Valeria &amp; Jesús
+          Valeria <span className="hero-ampersand">&amp;</span> Jesús
         </h1>
 
         <div className="mx-auto mt-8 flex items-center justify-center gap-4 text-[#42594a]/70">

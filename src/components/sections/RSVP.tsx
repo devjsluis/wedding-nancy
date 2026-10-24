@@ -266,7 +266,7 @@ export function RSVP({
           <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#42594a]/60 md:text-base">
             Tu presencia hará aún más especial este día.
             <span className="mt-1 block">
-              Agradecemos confirmar tu asistencia antes del 1 de noviembre.
+              La fecha límite para confirmar tu asistencia es el 20 de noviembre.
             </span>
           </p>
         </div>
@@ -289,7 +289,7 @@ export function RSVP({
               </p>
 
               <p className="mt-3 font-wedding-title text-4xl">
-                Jesús &amp; Valeria
+                Jesús <span className="font-wedding-ampersand">&amp;</span> Valeria
               </p>
             </div>
           </div>
